@@ -1,0 +1,13 @@
+{
+  "name": "quota-bot",
+  "version": "1.0.0",
+  "description": "Bot de gestion de quotas",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "dotenv": "^17.3.1"
+  }
+}
