@@ -1,26 +1,38 @@
 require("dotenv").config();
-client.login(process.env.DISCORD_TOKEN);
-const { 
-    Client, 
-    GatewayIntentBits, 
-    SlashCommandBuilder, 
-    REST, 
-    Routes,
-    PermissionFlagsBits,
-    EmbedBuilder
-} = require('discord.js');
 
-const fs = require('fs');
+const {
+  Client,
+  GatewayIntentBits,
+  SlashCommandBuilder,
+  REST,
+  Routes,
+  PermissionFlagsBits,
+  EmbedBuilder,
+} = require("discord.js");
 
-const TOKEN = 'DISCORD_TOKEN';
+const fs = require("fs");
 
+// 🔐 Variables d'environnement
+const TOKEN = process.env.DISCORD_TOKEN;
+const CLIENT_ID = process.env.CLIENT_ID;
+const GUILD_ID = process.env.GUILD_ID;
 
-const CLIENT_ID = '1474765313265631232';
-const GUILD_ID = '1472247163160629425';
-
+// ✅ Création du client
 const client = new Client({
-    intents: [GatewayIntentBits.Guilds]
+  intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.MessageContent,
+  ],
 });
+
+// ✅ Event ready
+client.once("ready", () => {
+  console.log(`✅ Connecté en tant que ${client.user.tag}`);
+});
+
+// ⚠️ LOGIN TOUT EN BAS
+client.login(TOKEN);
 
 // Charger les données
 let quotas = {};
