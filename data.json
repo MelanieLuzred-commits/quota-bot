@@ -1,6 +1,30 @@
 {
+  "weekStartISO": "2026-02-14T23:01:00.000Z",
+  "quotas": {
+    "567701222489063426": {
+      "menu": 20,
+      "Chesseburger": 20
+    },
+    "1298014896100737125": {
+      "Frites": 40
+    }
+  },
+  "objectifs": {
+    "cheeseburger": 30,
+    "sandwich_poulet": 30,
+    "wrap_poulet": 30,
+    "salade_poulet": 30,
+    "burger_vegan": 30,
+    "cheese_fish": 30,
+    "nuggets": 30,
+    "frites": 200,
+    "jus_orange": 65,
+    "ecola": 65,
+    "sprunk": 65,
+    "cafe": 0
+  },
   "567701222489063426": {
-    "menu": 110,
+    "menu": 210,
     "Menu": 200
   },
   "1298014896100737125": {
